@@ -14,6 +14,8 @@ import com.example.project_healthcare_v10.Main.Fragment.BaseItemFragment;
 import com.example.project_healthcare_v10.Main.Fragment.BodyInfo.BodyInfoFragment;
 import com.example.project_healthcare_v10.Main.Fragment.Breath.BreathFragment;
 import com.example.project_healthcare_v10.Main.Fragment.Calories.CaloriesFragment;
+import com.example.project_healthcare_v10.Main.Fragment.Exercise.ExerciseFragment;
+import com.example.project_healthcare_v10.Main.Fragment.Food.FoodFragment;
 import com.example.project_healthcare_v10.Main.Fragment.HeartRate.HeartRateFragment;
 import com.example.project_healthcare_v10.Main.Fragment.Phone.PhoneFragment;
 import com.example.project_healthcare_v10.Main.Fragment.Sleep.SleepFragment;
@@ -88,7 +90,7 @@ public class MenuFragment extends Fragment implements MenuContract.View {
         imgbtnExercise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "testing", Toast.LENGTH_SHORT).show();
+                ((MainActivity)getActivity()).setFrameContent("do exercise",(Fragment) new ExerciseFragment());
             }
         });
         imgbtnCalor.setOnClickListener(new View.OnClickListener() {
@@ -107,7 +109,7 @@ public class MenuFragment extends Fragment implements MenuContract.View {
         imgbtnFood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "testing", Toast.LENGTH_SHORT).show();
+                ((MainActivity)getActivity()).setFrameContent("control food",(Fragment) new FoodFragment());
             }
         });
         imgbtnSleep.setOnClickListener(new View.OnClickListener() {

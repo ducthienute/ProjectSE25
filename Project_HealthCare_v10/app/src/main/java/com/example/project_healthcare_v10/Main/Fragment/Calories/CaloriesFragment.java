@@ -11,10 +11,6 @@ public class CaloriesFragment extends BaseItemFragment {
         setItem("Calo burn:","kcal",1, R.drawable.calo);
     }
 
-    @Override
-    protected void initAction() {
-
-    }
 
     @Override
     protected void initPresenter() {

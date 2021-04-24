@@ -12,11 +12,13 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.project_healthcare_v10.R;
 
-public abstract class BaseItemFragment extends Fragment  {
+public abstract class BaseItemFragment extends Fragment implements View.OnClickListener, BaseItemContract.View {
 
+    public BaseItemPresenter presenter;
     public ImageButton imgbtnAdd, imgbtnEdit, imgbtnDelete, imgbtnEval, imgbtnSync, imgbtnGraph;
     public EditText[] etxtItem;
     public LinearLayout[] llItem;
@@ -38,9 +40,8 @@ public abstract class BaseItemFragment extends Fragment  {
 
     protected abstract void onCreateViewAppend();
 
-
     //INIT
-    protected void initView(View view) {
+    private void initView(View view) {
         etxtItem = new EditText[2];
         llItem = new LinearLayout[2];
         txtItem = new TextView[2];
@@ -68,11 +69,37 @@ public abstract class BaseItemFragment extends Fragment  {
         frameList = (FrameLayout) view.findViewById(R.id.frameList);
     }
 
-    protected abstract void initAction();
+    private void initAction() {
+        imgbtnAdd.setOnClickListener(this);
+        imgbtnEdit.setOnClickListener(this);
+        imgbtnDelete.setOnClickListener(this);
+        imgbtnEval.setOnClickListener(this);
+        imgbtnSync.setOnClickListener(this);
+        imgbtnGraph.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.imageButtonAdd: presenter.Add();
+                break;
+            case R.id.imageButtonEdit: presenter.Edit();
+                break;
+            case R.id.imageButtonDelete: presenter.Delete();
+                break;
+            case R.id.imageButtonEvaluate: presenter.Evaluate();
+                break;
+            case R.id.imageButtonSync: presenter.Sync();
+                break;
+            case R.id.imageButtonGraph: presenter.Graph();
+                break;
+        }
+    }
 
     protected abstract void initPresenter();
 
-    protected void setItem(String str, String hint, int indexItem, int drawable_id) {
+    @Override
+    public void setItem(String str, String hint, int indexItem, int drawable_id) {
         llItem[indexItem].setVisibility(View.VISIBLE);
         txtItem[indexItem].setText(str);
         etxtItem[indexItem].setHint(hint);
@@ -82,5 +109,10 @@ public abstract class BaseItemFragment extends Fragment  {
         Drawable drawable = getResources().getDrawable(drawable_id);
         drawable.setBounds(0,0,(int)Math.round(desity*30),(int)Math.round(desity*30));
         etxtItem[indexItem].setCompoundDrawables(null,null,drawable,null);
+    }
+
+    //Action
+    public void showMessage(String mess) {
+        Toast.makeText(this.getContext(),mess,Toast.LENGTH_SHORT).show();
     }
 }

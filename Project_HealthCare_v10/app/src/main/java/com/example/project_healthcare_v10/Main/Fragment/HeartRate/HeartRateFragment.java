@@ -12,13 +12,9 @@ public class HeartRateFragment extends BaseItemFragment {
     }
 
     @Override
-    protected void initAction() {
-
-    }
-
-    @Override
     protected void initPresenter() {
-
+        presenter = new HeartBeatPresenter();
+        presenter.setView(this);
     }
 
 }

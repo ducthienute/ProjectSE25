@@ -11,10 +11,6 @@ public class SleepFragment extends BaseItemFragment {
         setItem("End: ","time",1, R.drawable.wake_up);
     }
 
-    @Override
-    protected void initAction() {
-
-    }
 
     @Override
     protected void initPresenter() {

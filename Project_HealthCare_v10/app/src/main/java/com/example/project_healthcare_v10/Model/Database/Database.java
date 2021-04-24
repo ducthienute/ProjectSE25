@@ -1,4 +1,4 @@
-package com.example.project_healthcare_v10.Model;
+package com.example.project_healthcare_v10.Model.Database;
 
 public interface Database {
     Object openConnection(String connect_string);

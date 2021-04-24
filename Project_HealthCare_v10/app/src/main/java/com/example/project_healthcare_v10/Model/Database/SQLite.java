@@ -1,6 +1,4 @@
-package com.example.project_healthcare_v10.Model;
-
-import com.example.project_healthcare_v10.Model.Database.Database;
+package com.example.project_healthcare_v10.Model.Database;
 
 public class SQLite implements Database {
     @Override

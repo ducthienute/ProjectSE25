@@ -15,11 +15,6 @@ public class BodyInfoFragment extends BaseItemFragment {
     }
 
     @Override
-    protected void initAction() {
-
-    }
-
-    @Override
     protected void initPresenter() {
 
     }

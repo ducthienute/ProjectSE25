@@ -12,11 +12,6 @@ public class PeriodFragment extends BaseItemFragment {
     }
 
     @Override
-    protected void initAction() {
-
-    }
-
-    @Override
     protected void initPresenter() {
 
     }

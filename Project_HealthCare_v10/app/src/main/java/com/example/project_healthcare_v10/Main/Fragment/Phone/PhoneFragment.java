@@ -11,10 +11,6 @@ public class PhoneFragment extends BaseItemFragment {
         setItem("and","minute",1, R.drawable.phone);
     }
 
-    @Override
-    protected void initAction() {
-
-    }
 
     @Override
     protected void initPresenter() {

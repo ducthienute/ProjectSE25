@@ -1,5 +1,7 @@
 package com.example.project_healthcare_v10.Model;
 
+import com.example.project_healthcare_v10.Model.Database.Database;
+
 public class MongoDB implements Database {
     @Override
     public Object openConnection(String connect_string) {
