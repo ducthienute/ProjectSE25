@@ -7,8 +7,8 @@ public class CaloriesFragment extends BaseItemFragment {
 
     @Override
     protected void onCreateViewAppend() {
-        setItem("Calo in:","kcal",0, R.drawable.hamburger);
-        setItem("Calo burn:","kcal",1, R.drawable.calo);
+        setInputItem("Calo in:","kcal",0, R.drawable.hamburger);
+        setInputItem("Calo burn:","kcal",1, R.drawable.calo);
     }
 
 

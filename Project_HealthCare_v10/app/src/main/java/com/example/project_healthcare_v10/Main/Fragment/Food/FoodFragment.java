@@ -7,7 +7,7 @@ public class FoodFragment extends BaseItemFragment {
 
     @Override
     protected void onCreateViewAppend() {
-        setItem("Food:","find food", 0, R.drawable.vegetable);
+        setInputItem("Food:","find food", 0, R.drawable.vegetable);
     }
 
 

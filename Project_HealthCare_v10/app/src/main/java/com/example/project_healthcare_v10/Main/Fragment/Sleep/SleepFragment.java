@@ -7,8 +7,8 @@ public class SleepFragment extends BaseItemFragment {
 
     @Override
     protected void onCreateViewAppend() {
-        setItem("Start: ","time",0, R.drawable.sleeping);
-        setItem("End: ","time",1, R.drawable.wake_up);
+        setInputItem("Start: ","time",0, R.drawable.sleeping);
+        setInputItem("End: ","time",1, R.drawable.wake_up);
     }
 
 

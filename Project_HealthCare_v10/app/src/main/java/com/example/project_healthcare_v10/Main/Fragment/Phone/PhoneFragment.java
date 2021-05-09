@@ -7,8 +7,8 @@ public class PhoneFragment extends BaseItemFragment {
 
     @Override
     protected void onCreateViewAppend() {
-        setItem("Time use:","hour",0, -1);
-        setItem("and","minute",1, R.drawable.phone);
+        setInputItem("Time use:","hour",0, -1);
+        setInputItem("and","minute",1, R.drawable.phone);
     }
 
 

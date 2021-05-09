@@ -4,148 +4,222 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:padding="10dp">
+    android:padding="2dp">
 
-    <TableLayout
-        android:id="@+id/tableLayoutFillInfo"
-        android:layout_alignParentTop="true"
+    <RelativeLayout
+        android:id="@+id/layoutContent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layoutDataControl"
+        android:layout_alignParentStart="true">
+
+        <!--Layout Graph-->
+        <LinearLayout
+            android:padding="20dp"
+            android:background="@drawable/shape_border"
+            android:id="@+id/layoutGraph"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/lineChart1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="20dp">
+
+            </com.github.mikephil.charting.charts.LineChart>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/lineChart2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="20dp">
+
+            </com.github.mikephil.charting.charts.LineChart>
+        </LinearLayout>
+
+        <!--Layout List-->
+        <RelativeLayout
+            android:id="@+id/layoutList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:id="@+id/layoutListInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:id="@+id/layoutItem_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textViewItem_1"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="5dp"
+                        android:gravity="center_vertical"
+                        android:textAlignment="textEnd"
+                        android:textSize="15sp"
+                        tools:ignore="RtlCompat" />
+
+                    <EditText
+                        android:id="@+id/editTextItem_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="40dp"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutItem_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textViewItem_2"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="5dp"
+                        android:gravity="center_vertical"
+                        android:textAlignment="textEnd"
+                        android:textSize="15sp"
+                        tools:ignore="RtlCompat" />
+
+                    <EditText
+                        android:id="@+id/editTextItem_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="40dp"
+                        android:inputType="number" />
+                </LinearLayout>
+
+            </TableLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutListControl"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/layoutListInput"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageButton
+                    android:id="@+id/imageButtonAdd"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/menu_imagebutton"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/add"
+                    android:contentDescription="Add New Item" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/menu_imagebutton"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/edit"
+                    android:contentDescription="Edit Item Selected"/>
+
+                <ImageButton
+                    android:id="@+id/imageButtonDelete"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/menu_imagebutton"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/bin"
+                    android:contentDescription="Remove Item Selected"/>
+
+                <ImageButton
+                    android:id="@+id/imageButtonEvaluate"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/menu_imagebutton"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/question"
+                    android:contentDescription="Evaluate Item Selected"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:background="@drawable/shape_border"
+                android:id="@+id/layoutListContent"
+                android:layout_below="@+id/layoutListControl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <ImageButton
+            android:id="@+id/imageButtonReload"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/shape_border"
+            android:backgroundTint="@color/teal_200"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/reload" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutDataControl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
         android:padding="10dp">
 
-        <LinearLayout
-            android:id="@+id/linearLayoutItem1"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginBottom="5dp"
-            android:visibility="gone">
-            <TextView
-                android:id="@+id/textViewItem1"
-                android:layout_width="120dp"
-                android:layout_height="match_parent"
-                android:text="Item1"
-                android:textSize="15dp"
-                android:layout_marginEnd="5dp"
-                android:gravity="center_vertical"
-                android:textAlignment="textEnd"
-                tools:ignore="RtlCompat"/>
-
-            <EditText
-                android:id="@+id/editTextItem1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginRight="40dp"
-                android:inputType="number"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayoutItem2"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:visibility="gone"
-            android:layout_marginBottom="5dp">
-            <TextView
-                android:id="@+id/textViewItem2"
-                android:layout_width="120dp"
-                android:layout_height="match_parent"
-                android:text="Item2"
-                android:textSize="15dp"
-                android:layout_marginEnd="5dp"
-                android:gravity="center_vertical"
-                android:textAlignment="textEnd"
-                tools:ignore="RtlCompat"/>
-
-            <EditText
-                android:id="@+id/editTextItem2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginRight="40dp"
-                android:inputType="number"/>
-        </LinearLayout>
-
-    </TableLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayoutButtonControl"
-        android:layout_below="@+id/tableLayoutFillInfo"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_weight="3"
-        android:orientation="horizontal"
-        android:padding="10dp"
-        android:weightSum="8">
-
         <ImageButton
-            android:id="@+id/imageButtonAdd"
+            android:id="@+id/imageButtonSave"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:background="@color/menu_imagebutton"
             android:scaleType="fitCenter"
-            android:src="@drawable/add"/>
+            android:src="@drawable/save"
+            android:contentDescription="Save Data"/>
 
         <ImageButton
-            android:id="@+id/imageButtonEdit"
+            android:id="@+id/imageButtonChangeShowType"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:background="@color/menu_imagebutton"
             android:scaleType="fitCenter"
-            android:src="@drawable/edit"/>
+            android:src="@drawable/graph"
+            android:contentDescription="Change Show Type"/>
 
         <ImageButton
-            android:id="@+id/imageButtonDelete"
+            android:id="@+id/imageButtonEvaluateAll"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:background="@color/menu_imagebutton"
             android:scaleType="fitCenter"
-            android:src="@drawable/cancel"/>
-
-        <ImageButton
-            android:id="@+id/imageButtonEvaluate"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:background="@color/menu_imagebutton"
-            android:scaleType="fitCenter"
-            android:src="@drawable/question"/>
-
-    </LinearLayout>
-
-    <FrameLayout
-        android:id="@+id/frameList"
-        android:layout_below="@+id/linearLayoutButtonControl"
-        android:layout_above="@id/linearLayoutInfoControl"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
-    <LinearLayout
-        android:id="@+id/linearLayoutInfoControl"
-        android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal"
-        android:padding="10dp"
-        android:weightSum="4">
-
-        <ImageButton
-            android:id="@+id/imageButtonSync"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:background="@color/menu_imagebutton"
-            android:scaleType="fitCenter"
-            android:src="@drawable/sync"></ImageButton>
-
-        <ImageButton
-            android:id="@+id/imageButtonGraph"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:background="@color/menu_imagebutton"
-            android:scaleType="fitCenter"
-            android:src="@drawable/graph"></ImageButton>
-
+            android:src="@drawable/question"
+            android:contentDescription="Evaluate Data"
+            android:visibility="gone" />
     </LinearLayout>
 </RelativeLayout>
