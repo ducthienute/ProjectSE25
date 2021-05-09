@@ -18,3 +18,9 @@
 	1. đăng nhập với tài khoản username: admin, password: 123, sẽ được chuyển sang trang menu
 	2. Tất cả chức năng đều mở được trừ news, watch và doctor.
 	3. Nhấn nút back để trả về trang chủ, hoặc nhấn nút icon ở trên trái màn hình.
+
+#### Project v1.1 nộp lần đầu 09/05/2021
+######	Mức độ hoàn thành đồ án 60%
+	1. Hoàn Thiện 90% fragment chính để các fragment khác có thể kế thừa
+######  Hướng dẫn sử dụng v1.1:
+	https://github.com/ducthienute/ProjectSE25/issues/22
