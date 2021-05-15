@@ -7,13 +7,8 @@ public class PeriodFragment extends BaseItemFragment {
 
     @Override
     protected void onCreateViewAppend() {
-        setItem("Period start:","date",0, R.drawable.woman_blood);
-        setItem("Period end:","date",1, R.drawable.blood_end);
-    }
-
-    @Override
-    protected void initAction() {
-
+        setInputItem("Period start:","date",0, R.drawable.woman_blood);
+        setInputItem("Period end:","date",1, R.drawable.blood_end);
     }
 
     @Override

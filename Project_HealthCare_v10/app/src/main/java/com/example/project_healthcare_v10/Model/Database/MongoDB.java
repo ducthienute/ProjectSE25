@@ -1,6 +1,6 @@
-package com.example.project_healthcare_v10.Model;
+package com.example.project_healthcare_v10.Model.Database;
 
-public class SQLite implements Database {
+public class MongoDB implements Database {
     @Override
     public Object openConnection(String connect_string) {
         return null;

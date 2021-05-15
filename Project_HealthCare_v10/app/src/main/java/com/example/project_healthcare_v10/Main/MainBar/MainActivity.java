@@ -6,6 +6,7 @@ import androidx.appcompat.widget.PopupMenu;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.project_healthcare_v10.Login.LoginActivity;
 import com.example.project_healthcare_v10.Main.Menu.MenuFragment;
 import com.example.project_healthcare_v10.R;
 
@@ -87,8 +89,10 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
                     case R.id.itemSetting:
                         break;
                     case R.id.itemLogOut:
+                        finish();
                         break;
                     case R.id.itemExit:
+                        finishAffinity();
                         break;
                 }
                 return false;

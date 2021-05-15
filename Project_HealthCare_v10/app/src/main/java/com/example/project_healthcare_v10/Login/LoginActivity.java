@@ -45,19 +45,8 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
     }
 
     private void initAction() {
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                presenter.handleLogin(etxtUsername.getText().toString(), etxtPassword.getText().toString());
-            }
-        });
-
-        btnSignup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+        btnLogin.setOnClickListener(v -> presenter.handleLogin(etxtUsername.getText().toString(), etxtPassword.getText().toString()));
+        btnSignup.setOnClickListener(v -> { });
     }
 
     // OVERRIDE

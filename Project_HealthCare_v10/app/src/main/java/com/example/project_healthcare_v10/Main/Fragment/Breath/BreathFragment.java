@@ -7,14 +7,10 @@ public class BreathFragment extends BaseItemFragment {
 
     @Override
     protected void onCreateViewAppend() {
-        setItem("Breathe in:","s",0, R.drawable.air_in);
-        setItem("Breathe out:","s",1, R.drawable.air_out);
+        setInputItem("Breathe in:","s",0, R.drawable.air_in);
+        setInputItem("Breathe out:","s",1, R.drawable.air_out);
     }
 
-    @Override
-    protected void initAction() {
-
-    }
 
     @Override
     protected void initPresenter() {
