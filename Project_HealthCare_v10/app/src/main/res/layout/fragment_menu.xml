@@ -1,192 +1,275 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="16"
-    android:padding="10dp">
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
-        android:orientation="horizontal"
-        android:weightSum="3">
-
-        <ImageButton
-            android:id="@+id/imageButtonNews"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:background="@color/menu_imagebutton"
-            android:scaleType="centerInside"
-            android:src="@drawable/news"
-            android:tooltipText="News"></ImageButton>
-
-        <ImageButton
-            android:id="@+id/imageButtonHeartRate"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/menu_imagebutton"
-            android:src="@drawable/heart_rate"
-            android:tooltipText="Hearth Rate">
-
-        </ImageButton>
-
-        <ImageButton
-            android:id="@+id/imageButtonBodyInfo"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/menu_imagebutton"
-            android:src="@drawable/man"
-            android:tooltipText="Body Information">
-
-        </ImageButton>
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"></View>
+                android:padding="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3"
         android:orientation="horizontal"
-        android:weightSum="3">
+        android:weightSum="3"
+        android:baselineAligned="false">
 
-        <ImageButton
-            android:id="@+id/imageButtonExercise"
+        <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/menu_imagebutton"
-            android:src="@drawable/exercise"
-            android:tooltipText="Exercise">
+                android:padding="10dp"
+            tools:ignore="NestedWeights" >
+            <ImageButton
+                android:id="@+id/imageButtonNews"
+                android:layout_centerInParent="true"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerInside"
+                android:padding="10dp"
+                android:background="@drawable/shape_border_1"
+                android:backgroundTint="@color/menu_image_button"
+                android:src="@drawable/news"
+                android:tooltipText="News"/>
+        </RelativeLayout>
 
-        </ImageButton>
-
-        <ImageButton
-            android:id="@+id/imageButtonCalories"
+        <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/menu_imagebutton"
-            android:src="@drawable/calo"
-            android:tooltipText="Calories">
+                android:padding="10dp"
+            tools:ignore="NestedWeights" >
+            <ImageButton
+                android:id="@+id/imageButtonHeartRate"
+                android:layout_centerInParent="true"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerInside"
+                android:padding="10dp"
+                android:background="@drawable/shape_border_1"
+                android:backgroundTint="@color/menu_image_button"
+                android:src="@drawable/heart_rate"
+                android:tooltipText="Hearth Rate"/>
+        </RelativeLayout>
 
-        </ImageButton>
-
-        <ImageButton
-            android:id="@+id/imageButtonBreath"
+        <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/menu_imagebutton"
-            android:src="@drawable/breath"
-            android:tooltipText="Breath">
-
-        </ImageButton>
+                android:padding="10dp"
+            tools:ignore="NestedWeights" >
+            <ImageButton
+                android:id="@+id/imageButtonBodyInfo"
+                android:layout_centerInParent="true"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerInside"
+                android:padding="10dp"
+                android:background="@drawable/shape_border_1"
+                android:backgroundTint="@color/menu_image_button"
+                android:src="@drawable/man"
+                android:tooltipText="Body Information"/>
+        </RelativeLayout>
     </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"></View>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3"
         android:orientation="horizontal"
-        android:weightSum="3">
+        android:weightSum="3"
+        android:baselineAligned="false">
 
-        <ImageButton
-            android:id="@+id/imageButtonFood"
+        <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/menu_imagebutton"
-            android:src="@drawable/vegetable"
-            android:tooltipText="Food">
+                android:padding="10dp"
+            tools:ignore="NestedWeights" >
+            <ImageButton
+                android:id="@+id/imageButtonCalories"
+                android:layout_centerInParent="true"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerInside"
+                android:padding="10dp"
+                android:background="@drawable/shape_border_1"
+                android:backgroundTint="@color/menu_image_button"
+                android:src="@drawable/calories"
+                android:tooltipText="Calories"/>
+        </RelativeLayout>
 
-        </ImageButton>
-
-        <ImageButton
-            android:id="@+id/imageButtonSleep"
+        <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/menu_imagebutton"
-            android:src="@drawable/sleep"
-            android:tooltipText="Sleeping">
+                android:padding="10dp"
+            tools:ignore="NestedWeights" >
+            <ImageButton
+                android:id="@+id/imageButtonFood"
+                android:layout_centerInParent="true"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerInside"
+                android:padding="10dp"
+                android:background="@drawable/shape_border_1"
+                android:backgroundTint="@color/menu_image_button"
+                android:src="@drawable/vegetable"
+                android:tooltipText="Food"/>
+        </RelativeLayout>
 
-        </ImageButton>
-
-        <ImageButton
-            android:id="@+id/imageButtonDoctorContact"
+        <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/menu_imagebutton"
-            android:src="@drawable/doctor"
-            android:tooltipText="Contact Doctor">
-
-        </ImageButton>
+                android:padding="10dp"
+            tools:ignore="NestedWeights" >
+            <ImageButton
+                android:id="@+id/imageButtonExercise"
+                android:layout_centerInParent="true"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerInside"
+                android:padding="10dp"
+                android:background="@drawable/shape_border_1"
+                android:backgroundTint="@color/menu_image_button"
+                android:src="@drawable/exercise"
+                android:tooltipText="Exercise"/>
+        </RelativeLayout>
     </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"></View>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3"
-
         android:orientation="horizontal"
-        android:weightSum="3">
+        android:weightSum="3"
+        android:baselineAligned="false">
 
-        <ImageButton
-            android:id="@+id/imageButtonPhoneControl"
+        <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/menu_imagebutton"
-            android:src="@drawable/phone"
-            android:tooltipText="Phone">
+                android:padding="10dp"
+            tools:ignore="NestedWeights" >
+            <ImageButton
+                android:id="@+id/imageButtonSleep"
+                android:layout_centerInParent="true"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerInside"
+                android:padding="10dp"
+                android:background="@drawable/shape_border_1"
+                android:backgroundTint="@color/menu_image_button"
+                android:src="@drawable/sleep"
+                android:tooltipText="Sleep"/>
+        </RelativeLayout>
 
-        </ImageButton>
-
-        <ImageButton
-            android:id="@+id/imageButtonSmartWatchConnect"
+        <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/menu_imagebutton"
-            android:src="@drawable/smart_watch"
-            android:tooltipText="Connect to smart watch">
+                android:padding="10dp"
+            tools:ignore="NestedWeights" >
+            <ImageButton
+                android:id="@+id/imageButtonBreath"
+                android:layout_centerInParent="true"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerInside"
+                android:padding="10dp"
+                android:background="@drawable/shape_border_1"
+                android:backgroundTint="@color/menu_image_button"
+                android:src="@drawable/breath"
+                android:tooltipText="Breath"/>
+        </RelativeLayout>
 
-        </ImageButton>
-
-        <ImageButton
-            android:id="@+id/imageButtonPeriod"
+        <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#fff"
-            android:src="@drawable/woman_blood"
-            android:tooltipText="period"
-            android:visibility="invisible">
-
-        </ImageButton>
+                android:padding="10dp"
+            tools:ignore="NestedWeights" >
+            <ImageButton
+                android:id="@+id/imageButtonDoctorContact"
+                android:layout_centerInParent="true"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerInside"
+                android:padding="10dp"
+                android:background="@drawable/shape_border_1"
+                android:backgroundTint="@color/menu_image_button"
+                android:src="@drawable/doctor"
+                android:tooltipText="Doctor Contact"/>
+        </RelativeLayout>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:baselineAligned="false">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+                android:padding="10dp"
+            tools:ignore="NestedWeights" >
+            <ImageButton
+                android:id="@+id/imageButtonPhoneControl"
+                android:layout_centerInParent="true"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerInside"
+                android:padding="10dp"
+                android:background="@drawable/shape_border_1"
+                android:backgroundTint="@color/menu_image_button"
+                android:src="@drawable/phone"
+                android:tooltipText="Phone Control"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+                android:padding="10dp"
+            tools:ignore="NestedWeights" >
+            <ImageButton
+                android:id="@+id/imageButtonSmartWatchConnect"
+                android:layout_centerInParent="true"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerInside"
+                android:padding="10dp"
+                android:background="@drawable/shape_border_1"
+                android:backgroundTint="@color/menu_image_button"
+                android:src="@drawable/smart_watch"
+                android:tooltipText="Connect Smart Watch"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+                android:padding="10dp"
+            tools:ignore="NestedWeights" >
+            <ImageButton
+                android:id="@+id/imageButtonPeriod"
+                android:layout_centerInParent="true"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerInside"
+                android:padding="10dp"
+                android:background="@drawable/shape_border_1"
+                android:backgroundTint="@color/menu_image_button"
+                android:src="@drawable/woman_blood"
+                android:tooltipText="Period"
+                android:visibility="visible"/>
+        </RelativeLayout>
+    </LinearLayout>
 
 </LinearLayout>

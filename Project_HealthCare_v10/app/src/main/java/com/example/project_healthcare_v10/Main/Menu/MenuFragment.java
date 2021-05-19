@@ -1,5 +1,6 @@
 package com.example.project_healthcare_v10.Main.Menu;
 
+import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.os.Bundle;
 
@@ -10,13 +11,13 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.example.project_healthcare_v10.Main.Fragment.BaseItemFragment;
 import com.example.project_healthcare_v10.Main.Fragment.BodyInfo.BodyInfoFragment;
 import com.example.project_healthcare_v10.Main.Fragment.Breath.BreathFragment;
 import com.example.project_healthcare_v10.Main.Fragment.Calories.CaloriesFragment;
 import com.example.project_healthcare_v10.Main.Fragment.Exercise.ExerciseFragment;
 import com.example.project_healthcare_v10.Main.Fragment.Food.FoodFragment;
-import com.example.project_healthcare_v10.Main.Fragment.HeartRate.HeartRateFragment;
+import com.example.project_healthcare_v10.Main.Fragment.Heart.HeartFragment;
+import com.example.project_healthcare_v10.Main.Fragment.Period.PeriodFragment;
 import com.example.project_healthcare_v10.Main.Fragment.Phone.PhoneFragment;
 import com.example.project_healthcare_v10.Main.Fragment.Sleep.SleepFragment;
 import com.example.project_healthcare_v10.Main.MainBar.MainActivity;
@@ -85,6 +86,7 @@ public class MenuFragment extends Fragment implements MenuContract.View, View.On
         imgbtnPeriod.setOnClickListener(this);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
         switch (v.getId())
@@ -105,7 +107,7 @@ public class MenuFragment extends Fragment implements MenuContract.View, View.On
                 ((MainActivity)getActivity()).setFrameContent("control food",(Fragment) new FoodFragment());
                 break;
             case R.id.imageButtonPeriod:
-                ((MainActivity)getActivity()).setFrameContent("control period",(Fragment) new PhoneFragment());
+                ((MainActivity)getActivity()).setFrameContent("control period",(Fragment) new PeriodFragment());
                 break;
             case R.id.imageButtonPhoneControl:
                 ((MainActivity)getActivity()).setFrameContent("control phone",(Fragment) new PhoneFragment());
@@ -114,7 +116,7 @@ public class MenuFragment extends Fragment implements MenuContract.View, View.On
                 ((MainActivity)getActivity()).setFrameContent("control sleep time",(Fragment) new SleepFragment());
                 break;
             case R.id.imageButtonHeartRate:
-                ((MainActivity)getActivity()).setFrameContent("your heart",(Fragment) new HeartRateFragment());
+                ((MainActivity)getActivity()).setFrameContent("your heart",(Fragment) new HeartFragment());
                 break;
 
             case R.id.imageButtonNews:

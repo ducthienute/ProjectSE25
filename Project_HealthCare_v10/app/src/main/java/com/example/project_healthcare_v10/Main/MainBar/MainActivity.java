@@ -14,9 +14,14 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.project_healthcare_v10.Controller;
 import com.example.project_healthcare_v10.Login.LoginActivity;
+import com.example.project_healthcare_v10.Main.Fragment.BodyInfo.BodyInfoPresenter;
 import com.example.project_healthcare_v10.Main.Menu.MenuFragment;
+import com.example.project_healthcare_v10.Model.Database.LocalDatabase;
 import com.example.project_healthcare_v10.R;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements MainContract.View {
 
@@ -39,11 +44,19 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        LocalDatabase db = new LocalDatabase(this,1);
+        db.init();
+
+
+        //CREATE DATA TOOL
+        //db.deleteData();
+        //for (LocalDatabase.Type type: LocalDatabase.Type.values())
+        //    db.saveListData(Controller.createDataTool(type),type);
+
         initView();
         initPresenter();
         initAction();
     }
-
 
     //INIT
     public void initView() {
