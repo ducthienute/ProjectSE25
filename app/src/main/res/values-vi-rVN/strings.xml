@@ -86,7 +86,7 @@
     <string name="evaluate_heart_pressure_warning_l">Huyết áp thấp</string>
     <string name="evaluate_heart_pressure_bad_l">Huyết áp cực thấp</string>
     <string name="evaluate_impossible">Vô lý</string>
-    <string name="evaluate_heart_rate_bad_h">Nhịp tim cao</string>
+    <string name="evaluate_heart_rate_bad_h">Nhịp tim cao: Địt con mẹ m luôn</string>
     <string name="evaluate_heart_rate_warning_h">Cảnh báo nhịp tim cao</string>
     <string name="evaluate_heart_rate_normal">Nhịp tim bình thường</string>
     <string name="evaluate_heart_rate_good">Nhịp tim tốt</string>
@@ -191,4 +191,5 @@
     <string name="happy_birthday">Chúc mừng sinh nhật</string>
     <string name="data_create">Đã tạo dữ liệu</string>
     <string name="ask_to_create_data">Bạn muốn tạo bộ dữ liệu thử nghiệm?</string>
+    <string name="btn_logout">Đăng xuất</string>
 </resources>

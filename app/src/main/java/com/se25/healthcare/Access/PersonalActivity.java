@@ -23,7 +23,7 @@ import java.time.LocalDateTime;
 
 public class PersonalActivity extends AppCompatActivity {
 
-    Button btnBackToMenu;
+    Button btnBackToMenu, btnLogout;
     EditText etxtUsername, etxtPassword, etxtBirthday;
     RadioGroup rdGender;
 
@@ -55,10 +55,17 @@ public class PersonalActivity extends AppCompatActivity {
             },ld.getYear(),ld.getMonthValue()-1,ld.getDayOfMonth()).show();
         });
         btnBackToMenu.setOnClickListener(v -> checkData());
+
+        btnLogout.setOnClickListener(v -> {
+            Intent i = new Intent(this, MainActivity.class);
+            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(i);
+        });
     }
 
     private void initView(){
         btnBackToMenu = findViewById(R.id.btnMenu);
+        btnLogout = findViewById(R.id.btnLogout);
         etxtUsername = findViewById(R.id.etxtUsername);
         etxtPassword = findViewById(R.id.etxtPassword);
         etxtBirthday = findViewById(R.id.etxtBirthday);

@@ -5,6 +5,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:padding="20dp">
 
+
     <TextView
         android:id="@+id/txtVwTitle"
         android:layout_centerHorizontal="true"
@@ -200,14 +201,25 @@
     </LinearLayout>
 
     <Button
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:layout_below="@id/llAccessInfo"
         android:id="@+id/btnMenu"
-        android:text="@string/button_backtoapp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/llAccessInfo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
         android:backgroundTint="@color/button_gray"
-        android:textColor="@color/text_black"/>
+        android:text="@string/button_backtoapp"
+        android:textColor="@color/text_black" />
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnMenu"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/button_red"
+        android:text="@string/btn_logout"
+        android:textColor="@color/white" />
 
 </RelativeLayout>

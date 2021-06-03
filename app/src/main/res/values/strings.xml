@@ -89,7 +89,7 @@
     <string name="evaluate_heart_pressure_very_bad_h">Hypertensive crisis</string>
     <string name="evaluate_heart_pressure_bad_h2">Hypertension stage 2</string>
     <string name="evaluate_heart_pressure_bad_h1">Hypertension stage 1</string>
-    <string name="evaluate_heart_pressure_warning_h">Elevated blood pressure</string>
+    <string name="evaluate_heart_pressure_warning_h">Hypertension Warning</string>
     <string name="evaluate_heart_pressure_good">Good pressure</string>
     <string name="evaluate_heart_pressure_very_good">Very Good pressure</string>
     <string name="evaluate_heart_pressure_warning_l">Low blood pressure</string>
@@ -213,4 +213,5 @@
     <string name="happy_birthday">Happy Birthday</string>
     <string name="data_create">Data created</string>
     <string name="ask_to_create_data">Do you want to create test data?</string>
+    <string name="btn_logout">Logout</string>
 </resources>

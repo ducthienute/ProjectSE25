@@ -9,7 +9,7 @@ import com.se25.healthcare.R;
 import java.time.LocalDateTime;
 
 public class SleepItem extends Item {
-    private final static InputForm listForm = new InputForm(EditorInfo.TYPE_CLASS_TEXT, R.string.header_sleep_time, R.string.hint_empty, R.drawable.sleep);
+    private final static InputForm listForm = new InputForm(EditorInfo.TYPE_CLASS_TEXT, R.string.header_sleep_time, R.string.hour, R.drawable.sleep);
     private final static InputForm[] inputForms = {
             new InputForm(EditorInfo.TYPE_CLASS_TEXT, R.string.header_sleep_time, R.string.hint_datetime, R.drawable.sleep),
             new InputForm(EditorInfo.TYPE_CLASS_TEXT,R.string.header_wake_up_time, R.string.hint_datetime, R.drawable.waking_up),
