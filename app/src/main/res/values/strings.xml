@@ -18,7 +18,7 @@
     <string name="female_gender">Female</string>
     <string name="button_backtoapp">Back To App</string>
     <!--Main-->
-    <string name="toast_testing">This component not available yet.</string>
+    <string name="toast_testing">This component is not available yet.</string>
     <string name="button_news">Newspaper</string>
     <string name="button_smartwatch">Connect Smart Watch</string>
     <string name="button_doctor">Contact Doctor</string>
@@ -54,7 +54,7 @@
     <string name="header_item3">Item 3</string>
     <string name="hint_item1">hint item 1</string>
     <string name="hint_item2">hint item 2</string>
-    <string name="hint_item3">hint item 1</string>
+    <string name="hint_item3">hint item 3</string>
 
     <string name="title_form">Form</string>
     <string name="title_list">List</string>
@@ -74,7 +74,7 @@
     <string name="hint_blank">blank</string>
     <string name="date_now">Now</string>
 
-    <string name="hint_empty" />
+    <string name="hint_empty" >Empty</string>
     <string name="hint_day">Day</string>
     <string name="hint_date">Date</string>
     <string name="hint_datetime">Date Time</string>
@@ -178,14 +178,14 @@
     <string name="second">Second</string>
     <string name="milis">Milisecond</string>
     <string name="toast_evaluate_zero">You have no data</string>
-    <string name="toast_statistics_all_item">Change to statistics all items</string>
+    <string name="toast_statistics_all_item">Change to statistics of all items</string>
     <string name="dialog_README_FORMAT">Data processing with units of %s, prediction after 10 %s.</string>
     <string name="title_graph_all_items">All Items</string>
     <string name="title_graph_selected_items">Selected Items</string>
     <string name="header_bmi">BMI</string>
     <string name="dialog_breath_test">Time Count</string>
     <string name="dialog_breath_ready">Press okay when you are ready.</string>
-    <string name="dialog_cancle">Cancle</string>
+    <string name="dialog_cancle">Cancel</string>
     <string name="input_waiting">Waiting</string>
     <string name="evaluate_calories_very_good">fitness</string>
     <string name="wipe_data">Wipe Data</string>
@@ -194,11 +194,11 @@
     <string name="request">Request</string>
     <string name="result">Result</string>
     <string name="food_example">3 eggs, 100g sandwich,...</string>
-    <string name="exercise_example">1 hour ran,...</string>
+    <string name="exercise_example">1 hour running,...</string>
     <string name="address">Address</string>
     <string name="dialog_personal_not_valid">Data not valid</string>
     <string name="dialog_personal_back">Back to menu without save information?</string>
-    <string name="toast_you_need_create_personal_data">You need create personal data</string>
+    <string name="toast_you_need_create_personal_data">You need to create personal data</string>
     <string name="toast_personal_data_save">Personal data saved</string>
     <string name="dialog_personal_data_change">Personal data change</string>
     <string name="dialog_ask_to_save">Do you want to save?</string>
