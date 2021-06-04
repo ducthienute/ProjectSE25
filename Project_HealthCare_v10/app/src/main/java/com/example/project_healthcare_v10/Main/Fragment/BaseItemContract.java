@@ -4,16 +4,26 @@ import android.content.Context;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.project_healthcare_v10.Model.Database.LocalDatabase;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
+
+import org.apache.commons.math3.geometry.euclidean.twod.Line;
+
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 public interface BaseItemContract {
     interface View {
         Context getContext();
         void setInputItem(String str, String hint, int indexItem, int drawable_id);
         void showMessage(String mess);
-        void fillInput(int index, String data);
-        void clearInput();
+        void showDialog(String title, int icon,String mess);
+        void setEditTextData(int index, String data);
+        Object getItem(int index);
+        LineChart[] getCharts();
+        void initChart();
     }
     interface Presenter {
         void Add(Object...data);
@@ -22,9 +32,15 @@ public interface BaseItemContract {
         void Evaluate();
         void EvaluateAll();
         void Save();
-        void getData(RecyclerView rccView, int data);
+        void getData(RecyclerView rccView);
+        LocalDatabase.Type getTableName();
         void resetList();
-        void resetGraph(LineChart...lineCharts);
-        LineData formatDataToLineChart(String dataName,int index, int color);
+
+        BaseItem newData(LocalDateTime dateTime, Object... data);
+
+        void fitGraph();
+
+        LineDataSet getDataLineDataSet(String dataName,int index, int color);
+        LineDataSet getRegressionLineDataSet(String dataName, int index, float percent, int color);
     }
 }

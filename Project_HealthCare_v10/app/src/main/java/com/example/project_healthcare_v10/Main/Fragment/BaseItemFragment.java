@@ -1,6 +1,9 @@
 package com.example.project_healthcare_v10.Main.Fragment;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -9,18 +12,24 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.project_healthcare_v10.R;
 import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
+
+import java.util.Calendar;
 
 public abstract class BaseItemFragment extends Fragment
         implements View.OnClickListener, BaseItemContract.View {
@@ -35,7 +44,6 @@ public abstract class BaseItemFragment extends Fragment
     public LinearLayout layoutGraph;
     public LineChart[] lineCharts;
     public RecyclerView rccVwData;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -89,14 +97,6 @@ public abstract class BaseItemFragment extends Fragment
         rccVwData = (RecyclerView) view.findViewById(R.id.recyclerViewList);
     }
 
-    public void initChart(int index) {
-        //lineChart[index].setOnChartGestureListener(this);
-        //lineChart[index].setOnChartValueSelectedListener(this);
-
-        lineCharts[index].setDragEnabled(true);
-        lineCharts[index].setScaleEnabled(true);
-    }
-
     private void initAction() {
         imgbtnAdd.setOnClickListener(this);
         imgbtnEdit.setOnClickListener(this);
@@ -105,15 +105,21 @@ public abstract class BaseItemFragment extends Fragment
         imgbtnSave.setOnClickListener(this);
         imgbtnChangeShowtype.setOnClickListener(this);
         imgbtnReload.setOnClickListener(this);
+        imgbtnEvalAll.setOnClickListener(this);
+    }
+
+    @Override
+    public String getItem(int index) {
+        return etxtItem[index].getText().toString();
     }
 
     @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.imageButtonAdd: presenter.Add(etxtItem[0].getText(), etxtItem[1].getText());
+            case R.id.imageButtonAdd: presenter.Add(getItem(0), getItem(1));
                 break;
-            case R.id.imageButtonEdit: presenter.Edit(etxtItem[0].getText(), etxtItem[1].getText());
+            case R.id.imageButtonEdit: presenter.Edit(getItem(0), getItem(1));
                 break;
             case R.id.imageButtonDelete: presenter.Delete();
                 break;
@@ -128,12 +134,15 @@ public abstract class BaseItemFragment extends Fragment
                 {
                     layoutList.setVisibility(View.GONE);
                     layoutGraph.setVisibility(View.VISIBLE);
+                    imgbtnEvalAll.setVisibility(View.VISIBLE);
                     imgbtnChangeShowtype.setImageResource(R.drawable.note);
+                    initChart();
                 }
                 else
                 {
                     layoutList.setVisibility(View.VISIBLE);
                     layoutGraph.setVisibility(View.GONE);
+                    imgbtnEvalAll.setVisibility(View.GONE);
                     imgbtnChangeShowtype.setImageResource(R.drawable.graph);
                 }
                 imgbtnChangeShowtype.setScaleType(ImageView.ScaleType.FIT_CENTER);
@@ -142,7 +151,7 @@ public abstract class BaseItemFragment extends Fragment
                 if(layoutList.getVisibility() == View.VISIBLE)
                     presenter.resetList();
                 else
-                    presenter.resetGraph(lineCharts);
+                    presenter.fitGraph();
                 break;
         }
     }
@@ -151,10 +160,25 @@ public abstract class BaseItemFragment extends Fragment
 
     protected abstract void onCreateViewAppend();
 
+    @Override
+    public LineChart[] getCharts() {
+        return lineCharts;
+    }
+
     //Action
     @Override
     public void showMessage(String mess) {
         Toast.makeText(this.getContext(),mess,Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void showDialog(String title, int icon, String mess) {
+        AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
+        dialog.setTitle(title);
+        dialog.setIcon(icon);
+        dialog.setMessage(mess);
+        dialog.setPositiveButton("OK",(a,b)->{});
+        dialog.show();
     }
 
     @Override
@@ -176,15 +200,7 @@ public abstract class BaseItemFragment extends Fragment
     }
 
     @Override
-    public void fillInput(int indexItem, String data) {
+    public void setEditTextData(int indexItem, String data) {
         etxtItem[indexItem].setText(data);
     }
-
-    @Override
-    public void clearInput() {
-        etxtItem[0].setText("");
-        etxtItem[1].setText("");
-    }
-
-
 }

@@ -2,8 +2,6 @@ package com.example.project_healthcare_v10.Main.Fragment;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.os.Debug;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,14 +15,14 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.project_healthcare_v10.R;
+import com.github.mikephil.charting.data.Entry;
 
 
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
+import org.apache.commons.math3.stat.regression.SimpleRegression;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class BaseItemAdapter extends RecyclerView.Adapter<BaseItemAdapter.ItemHolder> {
     private Context context;
@@ -39,6 +37,16 @@ public class BaseItemAdapter extends RecyclerView.Adapter<BaseItemAdapter.ItemHo
         this.resId_img1 = rsId_img1;
         this.resId_img2 = rsId_img2;
         listSelect = new ArrayList<>();
+    }
+
+    public SimpleRegression getDataRegression(int index, float percent)
+    {
+        SimpleRegression regression = new SimpleRegression(true);
+        for (int i = 0, block = (int) (data.size() * percent); i <block; i++) {
+            Entry itemEntry = data.get(i).getEntry(index);
+            regression.addData(itemEntry.getX(),itemEntry.getY());
+        }
+        return regression;
     }
 
     public void setPresenter(BaseItemPresenter presenter) {
@@ -58,8 +66,8 @@ public class BaseItemAdapter extends RecyclerView.Adapter<BaseItemAdapter.ItemHo
     public void onBindViewHolder(@NonNull ItemHolder holder, int position) {
         BaseItem item = data.get(position);
         holder.setPosition(position);
-        holder.setData1(item.getData1());
-        holder.setData2(item.getData2());
+        holder.setData1(item.getData(0));
+        holder.setData2(item.getData(1));
         holder.setTime(item.getTime());
         holder.setStatus(item.getStatus());
         holder.setChecked(listSelect.contains(position));
@@ -77,8 +85,8 @@ public class BaseItemAdapter extends RecyclerView.Adapter<BaseItemAdapter.ItemHo
         int indexPosition = listSelect.size() - 1;
         if (indexPosition >= 0) {
             int position = listSelect.get(indexPosition);
-            presenter.view.fillInput(0, data.get(position).getData1().toString());
-            presenter.view.fillInput(1, data.get(position).getData2().toString());
+            presenter.view.setEditTextData(0, String.valueOf(data.get(position).getData(0)));
+            presenter.view.setEditTextData(1, String.valueOf(data.get(position).getData(1)));
             notifyItemChanged(position);
         }
     }
@@ -105,8 +113,23 @@ public class BaseItemAdapter extends RecyclerView.Adapter<BaseItemAdapter.ItemHo
 
             ckbSelect = (CheckBox) itemView.findViewById(R.id.checkBoxSelect);
 
-            imgVwData1.setImageResource(resId_img1);
-            imgVwData2.setImageResource(resId_img2);
+
+            if(resId_img1 == -1)
+            {
+                txtVwData1.setVisibility(View.GONE);
+                imgVwData1.setVisibility(View.GONE);
+            }
+            else
+                imgVwData1.setImageResource(resId_img1);
+
+            if(resId_img2 == -1)
+            {
+                txtVwData2.setVisibility(View.GONE);
+                imgVwData2.setVisibility(View.GONE);
+            }
+            else
+                imgVwData2.setImageResource(resId_img2);
+
 
             // init view first but not have the position,
             // onCreateViewHolder - > onBindItemHolder (position here)
@@ -117,18 +140,18 @@ public class BaseItemAdapter extends RecyclerView.Adapter<BaseItemAdapter.ItemHo
                     ckbSelect.setChecked(false);
                     listSelect.remove(indexPosition);
                     notifyItemChanged(position);
-                    presenter.view.clearInput();
+                    presenter.view.setEditTextData(0,"");
+                    presenter.view.setEditTextData(1,"");
                 } else {
                     ckbSelect.setChecked(true);
                     listSelect.add(position);
-                    int indexOldPosition = listSelect.size()-2;
-                    if(indexOldPosition >= 0)
+                    int indexOldPosition = listSelect.size() - 2;
+                    if (indexOldPosition >= 0)
                         notifyItemChanged(listSelect.get(indexOldPosition));
                 }
                 focusSelect();
             });
         }
-
 
         public void setSelect() {
             rlItem.setBackgroundResource(R.color.teal_200);
@@ -159,39 +182,11 @@ public class BaseItemAdapter extends RecyclerView.Adapter<BaseItemAdapter.ItemHo
         }
 
         @SuppressLint("SetTextI18n")
-        public void setStatus(int status) {
-            switch (status) {
-                case 0:
-                    txtVwStatus.setText("Very Good");
-                    txtVwStatus.setTextColor(ContextCompat.getColor(context, R.color.green));
-                    imgVwStatus.setImageResource(R.drawable.good);
-                    rlItem.setBackgroundResource(R.color.light_green);
-                    break;
-                case 1:
-                    txtVwStatus.setText("Good");
-                    txtVwStatus.setTextColor(ContextCompat.getColor(context, R.color.dark_green));
-                    imgVwStatus.setImageResource(R.drawable.mid_good);
-                    rlItem.setBackgroundResource(R.color.light_green_x);
-                    break;
-                case 2:
-                    txtVwStatus.setText("Warning");
-                    txtVwStatus.setTextColor(ContextCompat.getColor(context, R.color.orange));
-                    imgVwStatus.setImageResource(R.drawable.warn);
-                    rlItem.setBackgroundResource(R.color.light_orange);
-                    break;
-                case 3:
-                    txtVwStatus.setText("Bad");
-                    txtVwStatus.setTextColor(ContextCompat.getColor(context, R.color.dark_red));
-                    imgVwStatus.setImageResource(R.drawable.mid_bad);
-                    rlItem.setBackgroundResource(R.color.light_red_x);
-                    break;
-                case 4:
-                    txtVwStatus.setText("Very Bad");
-                    txtVwStatus.setTextColor(ContextCompat.getColor(context, R.color.red));
-                    imgVwStatus.setImageResource(R.drawable.bad);
-                    rlItem.setBackgroundResource(R.color.light_red);
-                    break;
-            }
+        public void setStatus(Status status) {
+            txtVwStatus.setText(status.getEvaluate());
+            txtVwStatus.setTextColor(ContextCompat.getColor(context, status.getTextColorId()));
+            imgVwStatus.setImageResource(status.getImgId());
+            rlItem.setBackgroundResource(status.getBgColorId());
         }
     }
 }
