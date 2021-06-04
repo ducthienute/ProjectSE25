@@ -77,61 +77,113 @@
     <string name="hint_kg">kg</string>
     <string name="hint_cm">cm</string>
     <string name="hint_kcal">kcal</string>
-    <string name="evaluate_heart_pressure_very_bad_h">Hypertensiven Krise: </string>
-    <string name="evaluate_heart_pressure_bad_h2">Bluthochdruck Stufe 2: </string>
-    <string name="evaluate_heart_pressure_bad_h1">Bluthochdruck Stufe 1: </string>
-    <string name="evaluate_heart_pressure_warning_h">Erhöhter Blutdruck: </string>
-    <string name="evaluate_heart_pressure_good">Guter Druck: </string>
-    <string name="evaluate_heart_pressure_very_good">Sehr guter Druck: </string>
-    <string name="evaluate_heart_pressure_warning_l">Niedriger Blutdruck: </string>
-    <string name="evaluate_heart_pressure_bad_l">Krise bei niedrigem Blutdruck: </string>
-    <string name="evaluate_impossible">Unmöglich: </string>
-    <string name="evaluate_heart_rate_bad_h">Herzfrequenz hoch: </string>
-    <string name="evaluate_heart_rate_warning_h">Warnung bei hoher Herzfrequenz: </string>
-    <string name="evaluate_heart_rate_normal">Herzfrequenz normal: </string>
-    <string name="evaluate_heart_rate_good">Gute Herzfrequenz: </string>
-    <string name="evaluate_heart_rate_warning_l">Warnung bei niedriger Herzfrequenz: </string>
-    <string name="evaluate_heart_rate_bad_l">Herzfrequenz niedrig: </string>
-    <string name="evaluate_breath_very_good">Sehr gut: </string>
-    <string name="evaluate_breath_good">Gut: </string>
-    <string name="evaluate_breath_normal">Normal: </string>
-    <string name="evaluate_breath_bad">Niedrig: </string>
-    <string name="evaluate_breath_very_bad">Sehr schlecht: </string>
-    <string name="evaluate_bmi_very_bad_h">Übergewichtige Klasse 3: </string>
-    <string name="evaluate_bmi_bad_h2">Übergewichtige Klasse 2: </string>
-    <string name="evaluate_bmi_bad_h1">Übergewichtige Klasse 1: </string>
-    <string name="evaluate_bmi_warning_h">Übergewicht: </string>
-    <string name="evaluate_bmi_normal">Normal: </string>
-    <string name="evaluate_bmi_warning_l">Leichte Dünnheit: </string>
-    <string name="evaluate_bmi_bad_l1">Mäßige Dünnheit: </string>
-    <string name="evaluate_bmi_bad_l2">Schwere Dünnheit: </string>
-    <string name="evaluate_calories_bad_h2">Zu hoch: </string>
-    <string name="evaluate_calories_bad_h1">Hoch: </string>
-    <string name="evaluate_calories_warning_h">Warnung: </string>
-    <string name="evaluate_calories_normal">Normal: </string>
-    <string name="evaluate_calories_good">Gut: </string>
-    <string name="evaluate_calories_warning_l">Weniger: </string>
-    <string name="evaluate_calories_bad_l1">Zu wenig: </string>
-    <string name="evaluate_sleep_very_bad_h">Schlaf zu viel: </string>
-    <string name="evaluate_sleep_bad_h">Langer Schlaf: </string>
-    <string name="evaluate_sleep_warning_h">Langer Schlaf: </string>
-    <string name="evaluate_sleep_normal">Normal: </string>
-    <string name="evaluate_sleep_warning_l">Kurzer Schlaf: </string>
-    <string name="evaluate_sleep_bad_l">Kurzer Schlaf: </string>
-    <string name="evaluate_sleep_very_bad_l">Kurzer Schlaf: </string>
-    <string name="evaluate_phone_very_bad_h">Verwenden Sie zu viel: </string>
-    <string name="evaluate_phone_bad_h">Verwenden Sie viel: </string>
-    <string name="evaluate_phone_warning_h">Verwenden Sie viel: </string>
-    <string name="evaluate_phone_normal">Normal: </string>
-    <string name="evaluate_phone_good">Gut: </string>
-    <string name="evaluate_period_very_bad_h">Zu lang: </string>
-    <string name="evaluate_period_bad_h">Lang: </string>
-    <string name="evaluate_period_warning_h">Warnung: </string>
-    <string name="evaluate_period_normal">Normal: </string>
-    <string name="evaluate_period_warning_l">Warnung: </string>
-    <string name="evaluate_period_bad_l">Kurz: </string>
-    <string name="evaluate_period_very_bad_l">Zu kurz: </string>
-    <string name="hello_blank_fragment">Hallo leeres Fragment</string>
+    <string name="evaluate_heart_pressure_very_bad_h">Hypertensiven Krise: Benachrichtigen Sie sofort Ihre Lieben, kontaktieren Sie die nächste medizinische Einrichtung, um Unterstützung zu erhalten
+</string>
+    <string name="evaluate_heart_pressure_bad_h2">Bluthochdruck Stufe 2: Der Zustand kann sich jederzeit verschlimmern. Bitten Sie daher Ihren Arzt, ein Diuretikum in Kombination mit einem blutdrucksenkenden Medikament zu verschreiben.
+</string>
+    <string name="evaluate_heart_pressure_bad_h1">Bluthochdruck Stufe 1: Ihr Arzt kann Ihnen zur Senkung Ihres Blutdrucks Diuretika verschreiben, und Sie müssen Ihren Lebensstil anpassen und Ihren Blutdruck regelmäßig kontrollieren.
+</string>
+    <string name="evaluate_heart_pressure_warning_h">Erhöhter Blutdruck: sollte sich hinlegen und ausruhen, tief atmen, den Körper entspannen, keinen Zucker hinzufügen, keine salzigen Speisen essen, keine Stimulanzien verwenden
+</string>
+    <string name="evaluate_heart_pressure_good">Guter Druck: lebe weiter so
+</string>
+    <string name="evaluate_heart_pressure_very_good">Sehr guter Druck: lebe weiter so</string>
+    <string name="evaluate_heart_pressure_warning_l">Niedriger Blutdruck: Begrenzen Sie die Alkoholaufnahme und erhöhen Sie die Wasseraufnahme, kontrollieren Sie die Salzaufnahme des Körpers, vermeiden Sie heiße Bäder oder Saunen</string>
+    <string name="evaluate_heart_pressure_bad_l">Krise bei niedrigem Blutdruck: Wenden Sie sich sofort zur Behandlung an das nächste medizinische Zentrum
+</string>
+    <string name="evaluate_impossible">Unmöglich: Die von Ihnen eingegebenen Daten sind ziemlich vage und es ist unwahrscheinlich, dass ein solcher Fall eintritt
+</string>
+    <string name="evaluate_heart_rate_bad_h">Herzfrequenz hoch: Bitte vermeiden Sie anstrengende Übungen und versuchen Sie gleichmäßig zu atmen
+</string>
+    <string name="evaluate_heart_rate_warning_h">Warnung bei hoher Herzfrequenz: Gib schlechte Angewohnheiten wie Rauchen, Alkohol, Genussmittel auf und trinke genug Wasser
+</string>
+    <string name="evaluate_heart_rate_normal">Herzfrequenz normal: Du bist gesund
+</string>
+    <string name="evaluate_heart_rate_good">Gute Herzfrequenz: Du bist gesund
+</string>
+    <string name="evaluate_heart_rate_warning_l">Warnung bei niedriger Herzfrequenz: Ihre Herzfrequenz zeigt Anzeichen einer Verlangsamung, Sie sollten mit dem Rauchen aufhören, salzige Lebensmittel reduzieren, fetthaltige Lebensmittel einschränken, mehr Gemüse essen eat
+</string>
+    <string name="evaluate_heart_rate_bad_l">Herzfrequenz niedrig: Sie sollten sich an Ihren Arzt wenden, um nach Medikamenten zu fragen, Ihre Angehörigen um Unterstützung bitten call
+</string>
+    <string name="evaluate_breath_very_good">Sehr gut: Du hast die Lunge eines Sportlers, übe weiter
+</string>
+    <string name="evaluate_breath_good">Gut: Deine Lunge kommt mit Druck ganz gut zurecht, mach weiter mit der Übung
+</string>
+    <string name="evaluate_breath_normal">Normal: Deine Lungen sind wie alle anderen, du solltest mehr Sport treiben, um in guter Form zu sein
+</string>
+    <string name="evaluate_breath_bad">Niedrig: Sie haben ein wenig Probleme mit Ihrer Lunge, vielleicht wegen des Körpers, aber Sie sollten Übungen ausprobieren, die körperliche Kraft erfordern, wie Joggen, Schwimmen oder Klimmzüge
+</string>
+    <string name="evaluate_breath_very_bad">Sehr schlecht: wenn Sie Probleme mit Ihrer Lunge haben, wenn Sie Schwierigkeiten beim Atmen haben, wenden Sie sich sofort an Ihren Arzt, oder es kann an Sauerstoffmangel aufgrund intensiver Aktivität liegen
+</string>
+    <string name="evaluate_bmi_very_bad_h">Übergewichtige Klasse 3: Sie sollten sofort zur Behandlung ins medizinische Zentrum gehen, Ihr Zustand ist sehr schlecht
+</string>
+    <string name="evaluate_bmi_bad_h2">Übergewichtige Klasse 2: Seien Sie beim Essen vorsichtig, da Sie höchstwahrscheinlich an Fettleber, Bluthochdruck und Diabetes leiden werden
+</string>
+    <string name="evaluate_bmi_bad_h1">Übergewichtige Klasse 1: Sie befinden sich nicht in einem gefährlichen Zustand, müssen aber auch beim Essen und Trinken wachsam sein und sollten einen Trainingsplan erstellen, um überschüssiges Fett zu reduzieren
+</string>
+    <string name="evaluate_bmi_warning_h">Übergewicht: Sie sollten erwägen, mehr Zeit mit Sport zu verbringen und eine vernünftige Ernährung aufzubauen
+</string>
+    <string name="evaluate_bmi_normal">Normal: Ihr Körper ist ziemlich moderat und sollte sich gesund ernähren und trainieren maintain
+</string>
+    <string name="evaluate_bmi_warning_l">Leichte Dünnheit: Du brauchst Nährstoffe, isst mehr Gemüse und rotes Fleisch, um Muskeln aufzubauen
+</string>
+    <string name="evaluate_bmi_bad_l1">Mäßige Dünnheit: Sie sollten Ihrer Ernährung Fett hinzufügen
+</string>
+    <string name="evaluate_bmi_bad_l2">Schwere Dünnheit: Bist du wie ein Zahnstocher, deine Ernährung ist zu schlecht, um dich dazu zu bringen, mehr Mahlzeiten am Tag zu essen und genug Schlaf zu bekommen
+</string>
+    <string name="evaluate_calories_bad_h2">Zu hoch: Sie haben zu viele Kalorien übrig, daher ist es leicht, Akne zu bekommen, also passen Sie es an
+</string>
+    <string name="evaluate_calories_bad_h1">Hoch: Du nimmst ein bisschen mehr auf als du verbrauchst, tu etwas, um es zu reduzieren
+</string>
+    <string name="evaluate_calories_warning_h">Warnung: Dein Kaloriengehalt ist zu unterschiedlich
+</string>
+    <string name="evaluate_calories_normal">Normal: genug Kalorien, um dich aktiv zu halten
+</string>
+    <string name="evaluate_calories_good">Gut: richtige Kalorienwerte für Arbeit und Aktivität
+</string>
+    <string name="evaluate_calories_warning_l">Weniger: Du nimmst ziemlich viel zu dir, also solltest du mehr Nährstoffe hinzufügen
+</string>
+    <string name="evaluate_calories_bad_l1">Zu wenig: sieht aus, als ob Sie nicht essen, sollten sofort etwas essen, um nicht ohnmächtig zu werden aufgrund von Energiemangel
+</string>
+    <string name="evaluate_sleep_very_bad_h">Schlaf zu viel: Verschlafen kann Ihre zirkadiane Zeit ruinieren, versuchen Sie, früher aufzustehen, um Ihre Stimmung zu verbessern
+</string>
+    <string name="evaluate_sleep_bad_h">Langer Schlaf: Wenn Sie zu viel schlafen, werden Sie sehr träge und können Ihre Arbeit nur schwer erledigen, also passen Sie sich an
+</string>
+    <string name="evaluate_sleep_warning_h">Langer Schlaf: Dein Schlaf ist gut genug, um 1 Tag lang zu funktionieren
+</string>
+    <string name="evaluate_sleep_normal">Normal: Sie sollten früher aufstehen, Sie sollten eine Morgengymnastik erstellen, um früher aufzuwachen
+</string>
+    <string name="evaluate_sleep_warning_l">Kurzer Schlaf: Wenn du nicht beschäftigt bist, gib mir noch 1-2 Stunden Schlaf
+</string>
+    <string name="evaluate_sleep_bad_l">Kurzer Schlaf: Wenn Ihnen das Einschlafen schwerfällt, vermeiden Sie stimulierende Lebensmittel wie Kaffee oder Kühe, schalten Sie leise Musik ein und üben Sie tiefes Atmen, damit Sie leichter einschlafen können.
+</string>
+    <string name="evaluate_sleep_very_bad_l">Kurzer Schlaf: du solltest dein Handy ausschalten und schlafen gehen, deine Schlafzeit ist wie die Anzahl der Regenfälle in der Wüste
+</string>
+    <string name="evaluate_phone_very_bad_h">Verwenden Sie zu viel: Wenn Sie kein Sklave Ihres Telefons sein möchten, schalten Sie es aus und sprechen Sie mehr mit Ihren Lieben
+</string>
+    <string name="evaluate_phone_bad_h">Verwenden Sie viel: sollte ab morgen die Zeit verkürzen und sich mehr auf externe Aktivitäten konzentrieren
+</string>
+    <string name="evaluate_phone_warning_h">Verwenden Sie viel: es scheint, dass Sie sehr von Ihrem Telefon abhängig sind, das Erlernen des Lesens von Büchern wird helfen
+</string>
+    <string name="evaluate_phone_normal">Normal: Sie verwenden mit einer ausreichenden Prognose einer Person
+</string>
+    <string name="evaluate_phone_good">Gut: du wirst nicht von deinem handy dominiert und hast ein gesundes leben, mach weiter so
+</string>
+    <string name="evaluate_period_very_bad_h">Zu lang: Dazu sollten Sie Ihren Arzt konsultieren
+</string>
+    <string name="evaluate_period_bad_h">Lang: Sie sollten einen Verwandten oder Arzt konsultieren und Tampons für den Fall bereithalten
+</string>
+    <string name="evaluate_period_warning_h">Warnung: anormal, sollte im Bedarfsfall aktiv Tampons kaufen
+</string>
+    <string name="evaluate_period_normal">Normal: Normaler Menstruationszyklus, essen Sie in Maßen und halten Sie sich in Form, um unregelmäßige Perioden zu vermeiden
+</string>
+    <string name="evaluate_period_warning_l">Warnung: Ihre Periode hat frühere Anzeichen, bitte achten Sie darauf, unerwartete Fälle zu vermeiden
+</string>
+    <string name="evaluate_period_bad_l">Kurz: Du solltest deinen Zyklus ein paar Tage früher verschieben, um besser auf dich aufzupassen
+</string>
+    <string name="evaluate_period_very_bad_l">Zu kurz: Der Menstruationszyklus ist früher als bei normalen Menschen, pass auf, dass du besser auf dich aufpassst
+</string>
+    <rsting name="hello_blank_fragment">Hallo leeres Fragment</rsting>
     <string name="toast_item_save_fail">Fehler: Daten des Elements nicht gültig.</string>
     <string name="toast_item_add_success">Erfolg: Erfolg beim Hinzufügen von Gegenständen.</string>
     <string name="toast_item_edit_success">Erfolg: Erfolg bei der Artikelbearbeitung.</string>
@@ -165,7 +217,8 @@
     <string name="dialog_breath_ready">Drücken Sie OK, wenn Sie bereit sind.</string>
     <string name="dialog_cancle">Stornieren</string>
     <string name="input_waiting">Warten</string>
-    <string name="evaluate_calories_very_good">Fitness: </string>
+    <string name="evaluate_calories_very_good">Fitness: Du solltest dein Training so halten
+</string>
     <string name="wipe_data">Daten löschen</string>
     <string name="data">Daten</string>
     <string name="add_data_to_temp">Daten zu Temp hinzufügen</string>
@@ -192,4 +245,5 @@
     <string name="data_create">Daten erstellt</string>
     <string name="ask_to_create_data">Sie möchten Testdaten erstellen?</string>
     <string name="btn_logout">Ausloggen</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -138,7 +138,7 @@
     <string name="toast_item_delete_success">Xóa thành công</string>
     <string name="dialog_evaluate_list">Đánh giá danh sách mục</string>
     <string name="dialog_general">Chung</string>
-    <string name="dialog_unreliable_data">Dữ liệu không đáng tin</string>
+    <string name="dialog_unreliable_data">Độ tin cậy dữ liệu</string>
     <string name="dialog_evaluate_fast_increase">Tăng nhanh</string>
     <string name="dialog_evaluate_increase">Tăng</string>
     <string name="dialog_evaluate_low_increase">Tăng chậm</string>

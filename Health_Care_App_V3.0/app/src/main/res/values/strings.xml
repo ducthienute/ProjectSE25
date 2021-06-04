@@ -112,54 +112,93 @@
 </string>
 
     <!--Hold Breath-->
-    <string name="evaluate_breath_very_good">Very Good: </string>
-    <string name="evaluate_breath_good">Good: </string>
-    <string name="evaluate_breath_normal">Normal: </string>
-    <string name="evaluate_breath_bad">Low: </string>
-    <string name="evaluate_breath_very_bad">Very Bad: </string>
+    <string name="evaluate_breath_very_good">Very Good: you have the lungs of an athlete, keep practicing
+</string>
+    <string name="evaluate_breath_good">Good: Your lungs can handle pressure quite well, keep up the exercise
+</string>
+    <string name="evaluate_breath_normal">Normal: Your lungs are like everyone else, you should exercise more to be in good shape
+</string>
+    <string name="evaluate_breath_bad">Low: you have a little trouble with your lungs, maybe because of the body, but you should try exercises that require physical strength such as jogging, swimming or pull-ups
+</string>
+    <string name="evaluate_breath_very_bad">Very Bad: you have problems with your lungs, if you find it difficult to breathe, contact your doctor immediately, or it may be because you are lacking oxygen due to intense activity
+</string>
 
     <!--BMI-->
-    <string name="evaluate_bmi_very_bad_h">Obese class 3: </string>
-    <string name="evaluate_bmi_bad_h2">Obese class 2: </string>
-    <string name="evaluate_bmi_bad_h1">Obese class 1: </string>
-    <string name="evaluate_bmi_warning_h">Overweight: </string>
-    <string name="evaluate_bmi_normal">Normal: </string>
-    <string name="evaluate_bmi_warning_l">Mild Thinness: </string>
-    <string name="evaluate_bmi_bad_l1">Moderate Thinness:</string>
-    <string name="evaluate_bmi_bad_l2">Severe Thinness: </string>
+    <string name="evaluate_bmi_very_bad_h">Obese class 3: you should go to the medical center for treatment right away, your condition is very bad
+</string>
+    <string name="evaluate_bmi_bad_h2">Obese class 2: Be careful in eating because you will most likely have fatty liver, high blood pressure, diabetes
+</string>
+    <string name="evaluate_bmi_bad_h1">Obese class 1: You are not in a dangerous state, but you must also be vigilant in eating and drinking and should build an exercise schedule to reduce excess fat
+</string>
+    <string name="evaluate_bmi_warning_h">Overweight: You should consider spending more time exercising and building a reasonable diet
+</string>
+    <string name="evaluate_bmi_normal">Normal: your body is quite moderate and should maintain a healthy diet, plus exercise
+</string>
+    <string name="evaluate_bmi_warning_l">Mild Thinness: you need nutrients, eat more vegetables and red meat to build muscle
+</string>
+    <string name="evaluate_bmi_bad_l1">Moderate Thinness: You should add fat to your diet
+</string>
+    <string name="evaluate_bmi_bad_l2">Severe Thinness: You look like a toothpick, your diet is too poor to make you like that, eat more meals a day and get enough sleep
+</string>
     <!--Calories in Day-->
-    <string name="evaluate_calories_bad_h2">Too high: </string>
-    <string name="evaluate_calories_bad_h1">High: </string>
-    <string name="evaluate_calories_warning_h">Warning: </string>
-    <string name="evaluate_calories_normal">Normal: </string>
-    <string name="evaluate_calories_good">Good: </string>
-    <string name="evaluate_calories_warning_l">Less: </string>
-    <string name="evaluate_calories_bad_l1">Too less: </string>
+    <string name="evaluate_calories_bad_h2">Too high: you have too many calories left over, so it\'s easy to get acne, so adjust it
+</string>
+    <string name="evaluate_calories_bad_h1">High: you take in a bit more than you consume, do something to reduce it
+</string>
+    <string name="evaluate_calories_warning_h">Warning: Your calorie level is too different
+</string>
+    <string name="evaluate_calories_normal">Normal: enough calories to keep you active
+</string>
+    <string name="evaluate_calories_good">Good: proper calorie levels for work and activity
+</string>
+    <string name="evaluate_calories_warning_l">Less: You take in quite a bit, so you should add more nutrients
+</string>
+    <string name="evaluate_calories_bad_l1">Too less: looks like you are not eating, should eat something right away to avoid fainting due to lack of energy
+</string>
 
     <!--Sleep Time in Day-->
-    <string name="evaluate_sleep_very_bad_h">Sleep too much: </string>
-    <string name="evaluate_sleep_bad_h">Long sleep: </string>
-    <string name="evaluate_sleep_warning_h">Long sleep: </string>
-    <string name="evaluate_sleep_normal">Normal: </string>
-    <string name="evaluate_sleep_warning_l">Short sleep: </string>
-    <string name="evaluate_sleep_bad_l">Short sleep: </string>
-    <string name="evaluate_sleep_very_bad_l">Short sleep: </string>
+    <string name="evaluate_sleep_very_bad_h">Sleep too much: Oversleeping can ruin your circadian time, try to get up earlier to improve your spirit
+</string>
+    <string name="evaluate_sleep_bad_h">Long sleep: Sleeping too much will make you very sluggish and difficult to complete your work, so adjust
+</string>
+    <string name="evaluate_sleep_warning_h">Long sleep: Your sleep is good enough to function for 1 day
+</string>
+    <string name="evaluate_sleep_normal">Normal: You should wake up earlier, you should create a morning exercise routine to wake up earlier
+</string>
+    <string name="evaluate_sleep_warning_l">Short sleep: If you\'re not busy, give me another 1-2 hours to sleep
+</string>
+    <string name="evaluate_sleep_bad_l">Short sleep: If you find it difficult to fall asleep, avoid stimulant foods such as coffee or cows, turn on soft music and practice deep breathing to help you fall asleep more easily.
+</string>
+    <string name="evaluate_sleep_very_bad_l">Short sleep: you should turn off your phone and go to sleep, your sleep time is like the number of times it rains in the desert
+</string>
 
     <!--Phone use time in Day-->
-    <string name="evaluate_phone_very_bad_h">Use too much: </string>
-    <string name="evaluate_phone_bad_h">Use much: </string>
-    <string name="evaluate_phone_warning_h">Use much: </string>
-    <string name="evaluate_phone_normal">Normal: </string>
-    <string name="evaluate_phone_good">Good: </string>
+    <string name="evaluate_phone_very_bad_h">Use too much: If you don\'t want to be a slave to your phone, turn it off and talk to your loved ones more
+</string>
+    <string name="evaluate_phone_bad_h">Use much: should reduce the time to use from tomorrow and focus on outside activities more
+</string>
+    <string name="evaluate_phone_warning_h">Use much: it seems that you depend on your phone a lot, learn to read books, it will be very helpful
+</string>
+    <string name="evaluate_phone_normal">Normal: you use with a sufficient prognosis of a person
+</string>
+    <string name="evaluate_phone_good">Good: you are not dominated by your phone and have a healthy life, keep up the good work
+</string>
 
     <!--Period-->
-    <string name="evaluate_period_very_bad_h">Too Long: </string>
-    <string name="evaluate_period_bad_h">Long: </string>
-    <string name="evaluate_period_warning_h">Warning: </string>
-    <string name="evaluate_period_normal">Normal: </string>
-    <string name="evaluate_period_warning_l">Warning: </string>
-    <string name="evaluate_period_bad_l">Short: </string>
-    <string name="evaluate_period_very_bad_l">Too Short: </string>
+    <string name="evaluate_period_very_bad_h">Too Long: You should consult your doctor about this
+</string>
+    <string name="evaluate_period_bad_h">Long: You should consult a relative or doctor and have tampons ready in case
+</string>
+    <string name="evaluate_period_warning_h">Warning: abnormal, should actively buy tampons in case of need
+</string>
+    <string name="evaluate_period_normal">Normal: Normal menstrual cycle, eat in moderation and keep in good shape to avoid irregular periods
+</string>
+    <string name="evaluate_period_warning_l">Warning: your period has signs of earlier, please pay attention to avoid unexpected cases
+</string>
+    <string name="evaluate_period_bad_l">Short: You should delay your cycle a few days early to take better care of yourself
+</string>
+    <string name="evaluate_period_very_bad_l">Too Short: Menstrual cycle is earlier than normal people, be careful to take better care of yourself
+</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="toast_item_save_fail">Fail: data of item not valid.</string>
@@ -195,7 +234,8 @@
     <string name="dialog_breath_ready">Press okay when you are ready.</string>
     <string name="dialog_cancle">Cancel</string>
     <string name="input_waiting">Waiting</string>
-    <string name="evaluate_calories_very_good">fit: </string>
+    <string name="evaluate_calories_very_good">fit: You should keep your workout regimen like this
+</string>
     <string name="wipe_data">Wipe Data</string>
     <string name="data">Data</string>
     <string name="add_data_to_temp">Add data to temp</string>
