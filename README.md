@@ -1,6 +1,9 @@
 # Đề tài môn Công nghệ phần mềm
-### Tên đề tài :App kiểm tra sức khỏe hằng ngày
-### Nhóm thực hiện: 25
+
+## Tên đề tài :App kiểm tra sức khỏe hằng ngày
+
+## Nhóm thực hiện: 25
+
 ## Danh sách các yêu cầu của đề tài:
 
 #### 1. Khảo sát yêu cầu khách hàng.
@@ -14,11 +17,12 @@
 	4. Presenter chỉ mới làm phần Login là chính, các phần khác vẫn còn trống.
 	5. Model đã khởi tạo demo, 2 class MongoDB (dành cho kết nối onl) và SQLite (local)
 	6. Chưa tạo Database để kết nối.
+  
 ######  Hướng dẫn sử dụng v1.0:
 	1. đăng nhập với tài khoản username: admin, password: 123, sẽ được chuyển sang trang menu
 	2. Tất cả chức năng đều mở được trừ news, watch và doctor.
 	3. Nhấn nút back để trả về trang chủ, hoặc nhấn nút icon ở trên trái màn hình.
-
+  
 ######  Hướng dẫn sử dụng v2.0:
 	1. Đăng nhập với tài khoản username: admin, password: 123, sẽ được chuyển sang trang menu
 	2. Mỗi chức năng hiện tại đều có các trường nhập, các nút thêm, xóa, sửa, tư vấn (?) bảng dữ liệu, nút lưu và nút thống kê.
@@ -53,3 +57,4 @@
 	18. Nếu bạn là nữ thì sẽ có thêm chức năng Period Care để kiểm soát chu kỳ kinh nguyệt của bạn, nhập ngày gần nhất xuất hiện kinh nguyệt, sau đó mọi chức năng con giống như chức năng Heart Care.
 	19. Để tạo bộ dữ liệu thử nghiệm thì bạn ra trang chủ, nhấn nút quay lại trên điện thoại 10 lần, sau đó OK.
 	20. Ứng dụng hỗ trợ 3 ngôn ngữ: tiếng Anh, tiếng Việt và tiếng Đức. Khi bạn thay đổi vùng và ngôn ngữ của điện thoại là Việt Nam ngôn ngữ của ứng dụng sẽ là tiếng Việt, tương tự với vùng và ngôn ngữ điện thoại là Đức thì ngôn ngữ ứng dụng là tiếng Đức, mọi vùng và ngôn ngữ còn lại thì ứng dụng sẽ hiển thị tiếng Anh.
+
