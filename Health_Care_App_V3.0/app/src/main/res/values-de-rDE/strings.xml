@@ -183,7 +183,7 @@
 </string>
     <string name="evaluate_period_very_bad_l">Zu kurz: Der Menstruationszyklus ist früher als bei normalen Menschen, pass auf, dass du besser auf dich aufpassst
 </string>
-    <rsting name="hello_blank_fragment">Hallo leeres Fragment</rsting>
+    <string name="hello_blank_fragment">Hallo leeres Fragment</string>
     <string name="toast_item_save_fail">Fehler: Daten des Elements nicht gültig.</string>
     <string name="toast_item_add_success">Erfolg: Erfolg beim Hinzufügen von Gegenständen.</string>
     <string name="toast_item_edit_success">Erfolg: Erfolg bei der Artikelbearbeitung.</string>
@@ -245,5 +245,4 @@
     <string name="data_create">Daten erstellt</string>
     <string name="ask_to_create_data">Sie möchten Testdaten erstellen?</string>
     <string name="btn_logout">Ausloggen</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
